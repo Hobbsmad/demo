@@ -1,0 +1,81 @@
+<html>
+<head>
+</head>
+
+  <style>
+    h4 {
+      font-size: 18px;
+   }
+
+   h5 {
+     font-size: 25px;
+     margin: 4px 2px;
+   }
+
+   h3 {
+     font-size: 20px;
+   }
+
+   p {
+     padding-left: 10px;
+   }
+
+   .container {
+     padding-left: 10px;
+   }
+
+  </style>
+
+<body>
+  <div id="users">
+<input class="search" placeholder="Search" />
+<button class="sort" data-sort="Material Type">
+  Sort by Material Type
+</button>
+
+  <!-- Child elements of container with class="list" becomes list items -->
+    <ul class="list">
+              <li>
+          <!-- The innerHTML of children with class="name" becomes this items "name" value -->
+                <h3 class="Material Type">copper</h3>
+                <p class="thing">hard</p>
+                <p class="thing">soft</p>
+              </li>
+              <li>
+                <h3 class="Material Type">45s</h3>
+                <p class="thing">45 Ell C x C 606</p>
+                <p class="thing">45 Ell Ftg x C 606-2</p>
+              </li>
+              <li>
+                <h3 class="Material Type">couplings</h3>
+                <h4 class="thing">couplings:</h4>
+                <p class="thing">couplings w/Stop 600</p>
+              </li>
+              <li>
+                <h3 class="Material Type">adapters</h3>
+                <p class="thing">adapter c x f 603</p>
+                <p class="thing">fitting adapter ftg x F 603-2</p>
+                <p class="thing">adapter c x m 604</p>
+                <p class="thing">adapter fitting ftg x M 604-2</p>
+                <p class="thing">adapter flush c x m 604-F</p>
+              </li>
+            </ul>
+
+        </div>
+
+<script src="list.min.js"></script>
+
+<script>
+
+
+var options = {
+  valueNames: [ 'Material Type', 'thing' ]
+};
+
+var userList = new List('users', options);
+
+
+</script>
+
+</body>
+</html>
